@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className='App'>
-      This is the message value: {msg}
+      <p>This is the message value: {msg}</p>
     </div>
   );
 }
