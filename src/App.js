@@ -18,12 +18,16 @@ function useSocketIO(url) {
 function App() {
   const socket = useSocketIO('https://yomo.cel-la.store');
   const [msg, setMsg] = useState('0');
+  const [showGlow, setShowGlow] = useState(false);
 
   useEffect(() => {
     if (socket) {
       // receive_sink is the event name of broadcast.
       socket.on('receive_sink', msg => {
-        setMsg(msg);
+        setMsg(previousMsg => {
+          setShowGlow(previousMsg === msg);
+          return msg;
+        });
       });
     }
   }, [socket]);
@@ -31,7 +35,7 @@ function App() {
   return (
     <div className='App'>
       <img className='logo' src='logo.png' alt='YoMo' />
-      <p>实时噪音分贝值: {msg}</p>
+      <p>实时噪音分贝值: <span className={showGlow ? 'anim-glow' : ''}>{msg}</span></p>
     </div>
   );
 }
