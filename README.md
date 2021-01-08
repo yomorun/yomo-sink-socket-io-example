@@ -1,10 +1,10 @@
 # yomo-sink-web
 
-The example of [socket.io](https://socket.io/) for yomo-sink which can be used to show the realtime data on the react app.
+An example of [socket.io](https://socket.io/) for [yomo](https://github.com/yomorun/yomo) represents how to build a `yomo-sink` to show realtime data in a react app.
 
 ## How to run the example
 
-``` shell
+```shell
 cd yomo-sink-web
 yarn 
 yarn start
@@ -29,7 +29,9 @@ function useSocketIO(url) {
 }
 
 function App() {
-  const socket = useSocketIO('http://localhost:8000');
+  // YoMo provides a simulated Socket.io server with data sent at a frequency of 100ms. 
+  // Data comes from the real noise sensor of YoMo N'Office
+  const socket = useSocketIO('https://yomo.cel-la.store');
   const [msg, setMsg] = useState('no message value yet');
 
   useEffect(() => {
@@ -49,6 +51,12 @@ function App() {
 }
 ```
 
-## How `yomo-sink-socketio` works
+## How `yomo-sink-socket-io-example` works
 
 ![YoMo](https://github.com/yomorun/yomo-sink-socketio/blob/main/yomo-sink.png)
+
+## More about YoMo
+
+[yomorun/yomo](https://github.com/yomorun/yomo)
+
+More [examples](https://github.com/yomorun)
