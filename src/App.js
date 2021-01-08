@@ -16,8 +16,8 @@ function useSocketIO(url) {
 }
 
 function App() {
-  const socket = useSocketIO('http://localhost:8000');
-  const [msg, setMsg] = useState('no message value yet');
+  const socket = useSocketIO('https://yomo.cel-la.store');
+  const [msg, setMsg] = useState('0');
 
   useEffect(() => {
     if (socket) {
@@ -30,7 +30,8 @@ function App() {
 
   return (
     <div className='App'>
-      <p>This is the message value: {msg}</p>
+      <img className='logo' src='logo.png' alt='YoMo' />
+      <p>实时噪音分贝值: {msg}</p>
     </div>
   );
 }

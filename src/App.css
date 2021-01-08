@@ -1,4 +1,21 @@
-.App p {
+.App {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+.App .logo {
   margin-top: 300px;
-  text-align: center;
+  width     : 100px;
+}
+
+.App p {
+  margin-top   : 50px;
+  width        : 400px;
+  overflow     : hidden;
+  font-size    : 30px;
+  font-weight  : 700;
+  text-overflow: ellipsis;
+  white-space  : nowrap;
 }
