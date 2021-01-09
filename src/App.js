@@ -11,7 +11,7 @@ function useSocketIO(url) {
     return () => {
       socketIo.disconnect();
     }
-  }, []);
+  }, [url]);
   return socket;
 }
 
