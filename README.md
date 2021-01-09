@@ -59,4 +59,4 @@ function App() {
 
 [yomorun/yomo](https://github.com/yomorun/yomo)
 
-More [examples](https://github.com/yomorun)
+More [examples](https://github.com/yomorun?q=examples&type=&language=)
