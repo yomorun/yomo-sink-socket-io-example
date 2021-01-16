@@ -14,8 +14,8 @@ export default function NoiseChart() {
       <Logo className="logo" src="logo.png" alt="YoMo" />
       <p>
         实时噪音分贝值：
-        <Num className={cx({ glow: lr[0] !== lr[1] })}>{lr[1]}</Num>
-      </p>
+        <Num className={cx({ glow: lr[0] !== lr[1] })}>{lr[1]}</Num>&nbsp;
+      </p>{new Date().valueOf()}
     </Main>
   );
 }
