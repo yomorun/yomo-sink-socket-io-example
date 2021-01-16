@@ -11,11 +11,11 @@ export default function NoiseChart() {
 
   return (
     <Main>
-      <Logo className='logo' src='logo.png' alt='YoMo' />
-    <p>
-      实时噪音分贝值：
-      <Num className={cx({ glow: lr[0] !== lr[1] })}>{lr[1]}</Num>
-    </p>
+      <Logo className="logo" src="logo.png" alt="YoMo" />
+      <p>
+        实时噪音分贝值：
+        <Num className={cx({ glow: lr[0] !== lr[1] })}>{lr[1]}</Num>
+      </p>
     </Main>
   );
 }
