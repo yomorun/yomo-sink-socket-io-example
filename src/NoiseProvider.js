@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { createContext, useContext, useState, useEffect } from "react";
 
 import { EMPTY, fromEvent } from "rxjs";
-import { pairwise, map } from "rxjs/operators";
+import { timestamp, pairwise, map } from "rxjs/operators";
 
 const NoiseContext = createContext({});
 
@@ -17,6 +17,7 @@ export function NoiseProvider({ children }) {
 
     const raw$ = fromEvent(socket, "receive_sink").pipe(
       map(x => x.toFixed(1)),
+      timestamp(),
       pairwise(),
     );
     setRaw$(raw$);
