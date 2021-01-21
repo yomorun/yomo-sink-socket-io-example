@@ -13,10 +13,10 @@ export function NoiseProvider({ children }) {
   useEffect(() => {
     const socket = io("https://yomo.cel-la.store", {
       transports: ["websocket"],
+      path: "/v2/socket.io"
     });
 
     const raw$ = fromEvent(socket, "receive_sink").pipe(
-      map(x => x.toFixed(1)),
       timestamp(),
       pairwise(),
     );
