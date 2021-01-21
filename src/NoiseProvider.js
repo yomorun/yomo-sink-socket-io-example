@@ -16,7 +16,7 @@ export function NoiseProvider({ children }) {
     });
 
     const raw$ = fromEvent(socket, "receive_sink").pipe(
-      map(x => x.toFixed(1)),
+      map(x => x.noise.toFixed(1)),
       timestamp(),
       pairwise(),
     );
