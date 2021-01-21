@@ -1,6 +1,6 @@
 # YoMo Example: yomo-sink-socket-io-example
 
-An example of [socket.io](https://socket.io/) for [yomo](https://github.com/yomorun/yomo) represents how to build a `yomo-sink` to show realtime data in a react app.
+An example of [socket.io](https://socket.io/) for [YoMo](https://github.com/yomorun/yomo), this example demonstrates how to build a `yomo-sink` to show real-time data in a react app.
 
 ## How to run this example
 
