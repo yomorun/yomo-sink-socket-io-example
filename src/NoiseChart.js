@@ -17,12 +17,12 @@ export default function NoiseChart() {
     <Main>
       <Logo className="logo" src="logo.png" alt="YoMo" />
       <p>
-        实时噪音分贝值：
+        Real-time noise level: 
         <Num className={cx({ glow: lr[0].value.noise !== lr[1].value.noise })}>
           {lr[1].value.noise}
         </Num>
       </p>
-      <span>时延: <Num>{lr[1].timestamp - lr[1].value.time}ms</Num></span>
+      <span>Delay: <Num>{lr[1].timestamp - lr[1].value.time}ms</Num></span>
     </Main>
   );
 }
