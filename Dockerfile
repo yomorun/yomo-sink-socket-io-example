@@ -6,9 +6,10 @@ RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 
 WORKDIR /app
 COPY . .
-
+RUN chmod +x ./docker-entrypoint.sh
 RUN yarn
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "yarn start"]
+ENTRYPOINT ["./docker-entrypoint.sh"]
+CMD ["yarn", "start"]
