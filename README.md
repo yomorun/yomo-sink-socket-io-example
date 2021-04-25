@@ -31,7 +31,7 @@ function useSocketIO(url) {
 function App() {
   // YoMo provides a simulated Socket.io server with data sent at a frequency of 100ms. 
   // Data comes from the real noise sensor of YoMo N'Office
-  const socket = useSocketIO('https://yomo.cel-la.store');
+  const socket = useSocketIO('http://localhost:8000');
   const [msg, setMsg] = useState('no message value yet');
 
   useEffect(() => {
