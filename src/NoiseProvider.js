@@ -11,9 +11,9 @@ export function NoiseProvider({ children }) {
   const [raw$, setRaw$] = useState(EMPTY);
 
   useEffect(() => {
-    const socket = io("http://localhost:8000", {
+    const socket = io("https://yomo.cel-la.store", {
       transports: ["websocket"],
-      path: "/socket.io"
+      path: "/v2/socket.io"
     });
 
     const raw$ = fromEvent(socket, "receive_sink").pipe(
