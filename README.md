@@ -15,40 +15,34 @@ yarn start
 - Code snippet
 
 ```js
-// should only run once and not on every re-render.
-function useSocketIO(url) {
-  const [socket, setSocket] = useState(null);
-  useEffect(() => {
-    const socketIo = io(url);
-    setSocket(socketIo);
-    return () => {
-      socketIo.disconnect();
-    }
-  }, []);
-  return socket;
-}
+import RealTimeQuery, { createWebSocketTransport, rxjsOperators } from 'real-time-query';
 
-function App() {
-  // YoMo provides a simulated Socket.io server with data sent at a frequency of 100ms. 
-  // Data comes from the real noise sensor of YoMo N'Office
-  const socket = useSocketIO('http://localhost:8000');
-  const [msg, setMsg] = useState('no message value yet');
+// Create an instance.
+const realTimeQuery = new RealTimeQuery({
+  transport: createWebSocketTransport({ apiUrl: 'http://localhost:8000', path: '/socket.io' })
+});
 
-  useEffect(() => {
-    if (socket) {
-      // receive_sink is the event name of broadcast.
-      socket.on('receive_sink', msg => {
-        setMsg(msg);
-      });
-    }
-  }, [socket]);
+// RxJS operators. https://www.learnrxjs.io/learn-rxjs/operators
+// Optional parameter.
+const { pairwise, timestamp } = rxjsOperators;
 
-  return (
-    <div className='App'>
-      This is the message value: {msg}
-    </div>
-  );
-}
+// Start getting data.
+realTimeQuery.subscribe(
+  {
+    eventName: 'receive_sink',
+    rxjsOperators: [
+      pairwise(),
+      timestamp(),
+    ]
+  },
+  result => {
+    // The data you need.
+    console.log('result:', result)
+  }
+);
+
+// Close connection when cleaning up
+realTimeQuery.close();
 ```
 
 ## How `yomo-sink-socket-io-example` works

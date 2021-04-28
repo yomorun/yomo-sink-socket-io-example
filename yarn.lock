@@ -7709,11 +7709,6 @@ object.values@^1.1.0, object.values@^1.1.1:
     es-abstract "^1.18.0-next.1"
     has "^1.0.3"
 
-observable-hooks@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/observable-hooks/-/observable-hooks-3.1.2.tgz#f76f04320467f706d16c6cfdee343fc4a52aa7fc"
-  integrity sha512-RJRDg5WgqmKz88hPsW/u91buUSICpcSxgm8c792HkF01lHNAtuqOzI/rQM11TNjcXQY6iKIbpPW+WqO7Ggiohg==
-
 obuf@^1.0.0, obuf@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
@@ -9261,6 +9256,14 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
+real-time-query@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/real-time-query/-/real-time-query-1.0.1.tgz#6acdf1b3bbef8ea1bc6a12a5e220e0f654622336"
+  integrity sha512-ZxBlovjiXAK/IILzkL8nNbUNKOSUEZOwUP+wmViTrjZhlfnSgqdXQqluAHjKbdnGbS5t/xemIpb001z6IJy4WQ==
+  dependencies:
+    rxjs "^6.6.7"
+    socket.io-client "^2.3.0"
+
 recursive-readdir@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/recursive-readdir/-/recursive-readdir-2.2.2.tgz#9946fb3274e1628de6e36b2f6714953b4845094f"
@@ -9626,10 +9629,10 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@^6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
-  integrity sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
+rxjs@^6.6.7:
+  version "6.6.7"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
+  integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
   dependencies:
     tslib "^1.9.0"
 
