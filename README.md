@@ -1,6 +1,6 @@
 # YoMo Example: yomo-sink-socket-io-example
 
-An example of [socket.io](https://socket.io/) for [YoMo](https://github.com/yomorun/yomo), this example demonstrates how to build a `yomo-sink` to show real-time data in a react app. You can also get more detailed information from the [example-noise](https://github.com/yomorun/example-noise).
+An example of [socket.io](https://socket.io/) for [YoMo](https://github.com/yomorun/yomo), this example demonstrates how to build a `yomo-sink` to show real-time data in a react app. You can get more detailed information from the [example-noise](https://github.com/yomorun/example-noise).
 
 ## How to run this example
 
@@ -61,7 +61,7 @@ More [examples](https://github.com/yomorun?q=examples&type=&language=)
 
 The case provides [Dockefile](https://github.com/yomorun/yomo-sink-socket-io-example/blob/main/Dockerfile) files for packaging into images.
 
-Also, you can get the official packaged image ([noise-web](https://github.com/yomorun/yomo-sink-socket-io-example)) from the mirror repository.
+Also, you can get the official packaged image ([noise-web](https://hub.docker.com/r/yomorun/noise-web)) from the mirror repository.
 
 ```
 docker pull yomorun/noise-web:latest
